@@ -9,48 +9,25 @@
 
 body{
   font-family:'Segoe UI',sans-serif;
-  display:flex;
   background:#0f172a;
   color:white;
 }
 
-/* SIDEBAR */
-.sidebar{
-  width:260px;
-  height:100vh;
-  background:#020617;
-  padding:30px 20px;
-  position:fixed;
+/* HEADER */
+.header{
+  padding:40px;
+  text-align:center;
+  background:linear-gradient(135deg,#1e3a8a,#2563eb);
 }
 
-.sidebar h2{
-  color:#60a5fa;
-  margin-bottom:20px;
-}
-
-.sidebar a{
-  display:block;
-  color:#cbd5f5;
-  text-decoration:none;
-  margin:12px 0;
-  transition:0.3s;
-}
-
-.sidebar a:hover{
-  color:white;
-  transform:translateX(5px);
-}
-
-/* MAIN */
-.main{
-  margin-left:260px;
-  padding:30px;
-  width:100%;
-}
+.header h1{font-size:40px;}
+.header p{opacity:0.9;}
 
 /* SECTION */
 .section{
-  margin-bottom:50px;
+  padding:40px 20px;
+  max-width:1000px;
+  margin:auto;
 }
 
 /* CARD */
@@ -64,170 +41,156 @@ body{
 
 .card:hover{
   transform:translateY(-5px);
-  box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
-
-/* TITLE */
-h1{font-size:36px;}
-h2{color:#60a5fa;margin-bottom:10px;}
 
 /* SKILLS */
 .skills span{
   display:inline-block;
   background:#2563eb;
-  padding:6px 12px;
+  padding:8px 14px;
   margin:5px;
   border-radius:20px;
-  font-size:13px;
 }
 
-/* PROJECT GRID */
-.projects{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:15px;
-}
-
+/* PROJECT */
 .project{
-  background:#334155;
-  padding:15px;
-  border-radius:10px;
-  transition:0.3s;
+  margin-top:20px;
 }
 
-.project:hover{
-  background:#475569;
+.project h3{
+  color:#60a5fa;
+}
+
+.badge{
+  display:inline-block;
+  background:#334155;
+  padding:5px 10px;
+  border-radius:8px;
+  margin:3px;
+  font-size:12px;
 }
 
 /* CONTACT */
-a{color:#93c5fd;text-decoration:none;}
-
-/* MOBILE */
-@media(max-width:768px){
-  .sidebar{
-    position:relative;
-    width:100%;
-    height:auto;
-  }
-  .main{
-    margin-left:0;
-  }
-}
+a{color:#93c5fd;}
 </style>
 </head>
 
 <body>
 
-<!-- SIDEBAR -->
-<div class="sidebar">
-  <h2>Baldev</h2>
-
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Projects</a>
-  <a href="#experience">Experience</a>
-  <a href="#contact">Contact</a>
-</div>
-
-<!-- MAIN -->
-<div class="main">
-
-<!-- HOME -->
-<div id="home" class="section">
+<!-- HEADER -->
+<div class="header">
   <h1>Baldev Chauhan</h1>
-  <p>Data Analyst | Power BI | SQL | Python</p>
+  <p>Data Analyst | Turning Data into Insights</p>
 </div>
 
 <!-- ABOUT -->
-<div id="about" class="section">
+<div class="section">
   <h2>About Me</h2>
   <div class="card">
     <p>
-      Senior MIS Executive with 6+ years of experience in reporting,
-      dashboard automation, and data-driven decision-making. Recently
-      transitioned into Data Analytics with hands-on experience in Power BI,
-      SQL, and Python.
+Data enthusiast with 6+ years of MIS experience, driving process efficiency through automation and insights. Proficient in Power BI, SQL, and Python, I'm transitioning into Data Analytics to unlock business growth. When I'm not crunching numbers, I love exploring new tech and sharing knowledge. Let's connect and drive data-driven impact!
     </p>
   </div>
 </div>
 
 <!-- SKILLS -->
-<div id="skills" class="section">
+<div class="section">
   <h2>Skills</h2>
   <div class="card skills">
     <span>Power BI</span>
     <span>SQL</span>
-    <span>Excel</span>
     <span>Python</span>
+    <span>Excel</span>
     <span>DAX</span>
     <span>Looker Studio</span>
     <span>ETL</span>
-    <span>Data Cleaning</span>
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JAVA SCRIPT</span>
   </div>
 </div>
 
 <!-- PROJECTS -->
-<div id="projects" class="section">
+<div class="section">
   <h2>Projects</h2>
-  <div class="projects">
 
-    <div class="project">
-      <b>Superstore Sales Analytics</b>
-      <p>Power BI dashboard using DAX (RANKX, TOPN) for sales insights</p>
-    </div>
+  <div class="card project">
+    <h3>Superstore Sales Analytics</h3>
+    <p>Built Power BI dashboard to analyze sales & profit trends.</p>
 
-    <div class="project">
-      <b>HR Analytics Dashboard</b>
-      <p>Employee attrition & KPI visualization</p>
-    </div>
+    <p><b>Tools Used:</b></p>
+    <span class="badge">Power BI</span>
+    <span class="badge">DAX</span>
 
-    <div class="project">
-      <b>SQL Retail Analysis</b>
-      <p>Customer & product insights using SQL queries</p>
-    </div>
+    <p><b>DAX Used:</b></p>
+    <span class="badge">CALCULATE</span>
+    <span class="badge">RANKX</span>
+    <span class="badge">TOPN</span>
 
-    <div class="project">
-      <b>Diwali Sales Analysis</b>
-      <p>Python EDA using Pandas & Seaborn</p>
-    </div>
-
+    <p><b>Impact:</b> Identified top-performing regions and products.</p>
   </div>
+
+  <div class="card project">
+    <h3>HR Analytics Dashboard</h3>
+    <p>Created dashboard to track employee attrition & KPIs.</p>
+
+    <p><b>Tools Used:</b></p>
+    <span class="badge">Power BI</span>
+
+    <p><b>Impact:</b> Helped understand employee trends.</p>
+  </div>
+
+  <div class="card project">
+    <h3>SQL Retail Analysis</h3>
+    <p>Analyzed retail dataset using SQL queries.</p>
+
+    <span class="badge">SQL</span>
+    <span class="badge">JOIN</span>
+    <span class="badge">GROUP BY</span>
+
+    <p><b>Impact:</b> Identified top customers & products.</p>
+  </div>
+
+  <div class="card project">
+    <h3>Diwali Sales Analysis</h3>
+    <p>Performed EDA using Python to understand buying patterns.</p>
+
+    <span class="badge">Python</span>
+    <span class="badge">Pandas</span>
+    <span class="badge">Seaborn</span>
+
+    <p><b>Impact:</b> Found key customer segments.</p>
+  </div>
+
 </div>
 
 <!-- EXPERIENCE -->
-<div id="experience" class="section">
+<div class="section">
   <h2>Experience</h2>
   <div class="card">
-
-    <p><b>Senior MIS & Data Analyst – WorldOne</b></p>
+    <p><b>Data Analyst & Business Automation at WorldOne</b></p>
     <ul>
       <li>100% accurate reporting</li>
-      <li>Dashboard automation</li>
-      <li>25% efficiency improvement</li>
+      <li>Analyzed business data to identify trends, insights, and areas for improvement, driving business decisions.</li>
+      <li>Developed and maintained dashboards (Power BI, Google Data Studio) for HR, Sales, and Purchase teams, enabling data-driven decisions.</li>
+      <li>Automated data extraction, transformation, and reporting using Google Apps Script, reducing manual effort by 30 hours/week.</li>
+      <li>Conducted training sessions on data interpretation and dashboard usage for stakeholders.</li>
+      <li>Collaborated with teams to streamline processes, improve data accuracy, and implement data-driven solutions.</li>
     </ul>
-
-    <br>
-
-    <p><b>MIS Executive – Gopala Ayurveda</b></p>
-    <p><b>Data Executive – Sisla Laboratories</b></p>
-
   </div>
 </div>
 
 <!-- CONTACT -->
-<div id="contact" class="section">
+<div class="section">
   <h2>Contact</h2>
   <div class="card">
     <p>📞 9999751633</p>
     <p>📧 saka.chauhan29jan@gmail.com</p>
     <p>
-      🔗 <a href="http://www.linkedin.com/in/baldev-chauhan-722b27357" target="_blank">
+      <a href="http://www.linkedin.com/in/baldev-chauhan-722b27357" target="_blank">
       LinkedIn Profile</a>
     </p>
   </div>
-</div>
-
 </div>
 
 </body>
