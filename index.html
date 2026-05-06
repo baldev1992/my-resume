@@ -2,63 +2,230 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Baldev Chauhan</title>
+<title>Baldev Chauhan | Data Analyst</title>
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
 body{
-  font-family: Arial;
-  margin:0;
-  background:#f4f6f9;
+  font-family:'Segoe UI',sans-serif;
+  display:flex;
+  background:#0f172a;
+  color:white;
 }
 
-.container{
-  max-width:800px;
-  margin:auto;
-  padding:20px;
+/* SIDEBAR */
+.sidebar{
+  width:260px;
+  height:100vh;
+  background:#020617;
+  padding:30px 20px;
+  position:fixed;
 }
 
+.sidebar h2{
+  color:#60a5fa;
+  margin-bottom:20px;
+}
+
+.sidebar a{
+  display:block;
+  color:#cbd5f5;
+  text-decoration:none;
+  margin:12px 0;
+  transition:0.3s;
+}
+
+.sidebar a:hover{
+  color:white;
+  transform:translateX(5px);
+}
+
+/* MAIN */
+.main{
+  margin-left:260px;
+  padding:30px;
+  width:100%;
+}
+
+/* SECTION */
+.section{
+  margin-bottom:50px;
+}
+
+/* CARD */
 .card{
-  background:white;
+  background:#1e293b;
   padding:20px;
-  margin-bottom:15px;
+  border-radius:12px;
+  margin-top:15px;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* TITLE */
+h1{font-size:36px;}
+h2{color:#60a5fa;margin-bottom:10px;}
+
+/* SKILLS */
+.skills span{
+  display:inline-block;
+  background:#2563eb;
+  padding:6px 12px;
+  margin:5px;
+  border-radius:20px;
+  font-size:13px;
+}
+
+/* PROJECT GRID */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:15px;
+}
+
+.project{
+  background:#334155;
+  padding:15px;
   border-radius:10px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  transition:0.3s;
 }
 
-h1,h2{
-  margin-bottom:10px;
+.project:hover{
+  background:#475569;
 }
 
+/* CONTACT */
+a{color:#93c5fd;text-decoration:none;}
+
+/* MOBILE */
+@media(max-width:768px){
+  .sidebar{
+    position:relative;
+    width:100%;
+    height:auto;
+  }
+  .main{
+    margin-left:0;
+  }
+}
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <h2>Baldev</h2>
 
-<div class="card">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#experience">Experience</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+<!-- HOME -->
+<div id="home" class="section">
   <h1>Baldev Chauhan</h1>
   <p>Data Analyst | Power BI | SQL | Python</p>
 </div>
 
-<div class="card">
-  <h2>About</h2>
-  <p>Experienced MIS Executive transitioning into Data Analytics.</p>
+<!-- ABOUT -->
+<div id="about" class="section">
+  <h2>About Me</h2>
+  <div class="card">
+    <p>
+      Senior MIS Executive with 6+ years of experience in reporting,
+      dashboard automation, and data-driven decision-making. Recently
+      transitioned into Data Analytics with hands-on experience in Power BI,
+      SQL, and Python.
+    </p>
+  </div>
 </div>
 
-<div class="card">
+<!-- SKILLS -->
+<div id="skills" class="section">
   <h2>Skills</h2>
-  <p>Power BI, SQL, Excel, Python, DAX</p>
+  <div class="card skills">
+    <span>Power BI</span>
+    <span>SQL</span>
+    <span>Excel</span>
+    <span>Python</span>
+    <span>DAX</span>
+    <span>Looker Studio</span>
+    <span>ETL</span>
+    <span>Data Cleaning</span>
+  </div>
 </div>
 
-<div class="card">
+<!-- PROJECTS -->
+<div id="projects" class="section">
   <h2>Projects</h2>
-  <p>Sales Dashboard, HR Analytics, SQL Analysis</p>
+  <div class="projects">
+
+    <div class="project">
+      <b>Superstore Sales Analytics</b>
+      <p>Power BI dashboard using DAX (RANKX, TOPN) for sales insights</p>
+    </div>
+
+    <div class="project">
+      <b>HR Analytics Dashboard</b>
+      <p>Employee attrition & KPI visualization</p>
+    </div>
+
+    <div class="project">
+      <b>SQL Retail Analysis</b>
+      <p>Customer & product insights using SQL queries</p>
+    </div>
+
+    <div class="project">
+      <b>Diwali Sales Analysis</b>
+      <p>Python EDA using Pandas & Seaborn</p>
+    </div>
+
+  </div>
 </div>
 
-<div class="card">
+<!-- EXPERIENCE -->
+<div id="experience" class="section">
+  <h2>Experience</h2>
+  <div class="card">
+
+    <p><b>Senior MIS & Data Analyst – WorldOne</b></p>
+    <ul>
+      <li>100% accurate reporting</li>
+      <li>Dashboard automation</li>
+      <li>25% efficiency improvement</li>
+    </ul>
+
+    <br>
+
+    <p><b>MIS Executive – Gopala Ayurveda</b></p>
+    <p><b>Data Executive – Sisla Laboratories</b></p>
+
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="section">
   <h2>Contact</h2>
-  <p>Email: your email</p>
+  <div class="card">
+    <p>📞 9999751633</p>
+    <p>📧 saka.chauhan29jan@gmail.com</p>
+    <p>
+      🔗 <a href="http://www.linkedin.com/in/baldev-chauhan-722b27357" target="_blank">
+      LinkedIn Profile</a>
+    </p>
+  </div>
 </div>
 
 </div>
